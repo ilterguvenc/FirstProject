@@ -1,0 +1,39 @@
+x = 3
+while x > 0:
+    inputInfo = input("Please Name and Surname: ")
+    if inputInfo == "İlter Güvenç":
+        print("Welcome")
+        break
+    else:
+        x -= 1
+        print("You Entered The Wrong Name and Surname. Your Right to Remain", x)
+        if x == 0:
+            print("Please Try Again Later")
+
+lesson = int(input("Enter the Number of Courses You Want to Create"))
+if (lesson <= 5) and (lesson >= 3):
+    print("The Number of Lessons you Selected", lesson)
+    dersler = input("Enter the Courses You Want to Choose")
+    dersList = []
+    dersList.append(lesson)
+    print("The Lessons You Choose Are Saved", dersler, dersList)
+
+else:
+    print("You Must Choose a Minimum of 3 and a Maximum of 5 lessons.")
+
+lesson = []
+def lesson_no(number):
+    if (number <= 5) and (number >= 3):
+        for i in range(number):
+            taken_lessons = input("Lütfen Derslerinizi giriniz")
+            lesson.append(taken_lessons)
+            print(lesson)
+        return "Dersleriniz:", lesson
+    elif number < 3:
+        return "hataaaa"
+    else:
+        return "5'den falza olmaz"
+if True:
+    number = int(input("Kaç Ders seçemk istiyorsunzu"))
+    x = lesson_no(number)
+    print(x)
